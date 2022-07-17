@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  skyrim:
+    image: tiltedphoques/st-reborn-server
+    container_name: skyrim
+    volumes:
+      - /opt/docker/skyrimserver/config:./config
+      - /opt/docker/skyrimserver/Data:./data
+      - /opt/docker/skyrimserver/logs:./logs
+    ports:
+      - 10578:10578/udp
+    restart: always
