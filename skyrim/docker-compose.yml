@@ -4,6 +4,8 @@ services:
   skyrim:
     image: tiltedphoques/st-reborn-server:latest
     container_name: skyrim
+    stdin_open: true
+    tty: true
     volumes:
       - ./config:/home/server/config
       - ./logs:/home/server/logs
