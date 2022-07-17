@@ -5,9 +5,8 @@ services:
     image: tiltedphoques/st-reborn-server:latest
     container_name: skyrim
     volumes:
-      - ./config:/opt/docker/skyrimserver/config
-      - ./data:/opt/docker/skyrimserver/Data
-      - ./logs:/opt/docker/skyrimserver/logs
+      - ./config:/home/server/config
+      - ./logs:/home/server/logs
     ports:
       - 10578:10578/udp
     restart: unless-stopped
