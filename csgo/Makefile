@@ -70,7 +70,9 @@ mods:
 	# prophunt
 	@cd ${CSGO_DIR} && \
 		curl -o prophunt.zip -sqL "https://github.com/olavim/sm-PropHunt/archive/refs/heads/master.zip" && \
-		unzip prophunt.zip
+		unzip prophunt.zip -d tmp && \
+		mv tmp/sm-PropHunt-master/*/* . && \
+		rm -rf tmp
 
 .PHONY: clean
 clean:
