@@ -49,6 +49,7 @@ config:
 	cp gamemodes/competitive/competitive.cfg ${CFG_DIR}/competitive.cfg
 	cp gamemodes/practice/practice.cfg ${CFG_DIR}/practice.cfg
 	cp gamemodes/surf/surf.cfg ${CFG_DIR}/surf.cfg
+	cp gamemodes/prophunt/prophunt.cfg ${CFG_DIR}/prophunt.cfg
 
 .PHONY: update
 update:

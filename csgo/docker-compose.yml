@@ -8,4 +8,5 @@ services:
       - STEAM_GAMESERVER_TOKEN=value
       - RCON_PASSWORD=
     ports:
+      - "27015:27015"
       - "27015:27015/udp"
