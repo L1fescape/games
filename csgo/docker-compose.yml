@@ -1,0 +1,7 @@
+version: '3.8'
+services:
+  cs:
+    build: .
+    container_name: csgo
+    ports:
+      - "27015:27015/udp"
