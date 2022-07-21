@@ -26,6 +26,7 @@ RUN apt-get install -y \
   apt-utils \
   build-essential \
   git \
+  unzip \
   # envsubstr
   gettext-base \
   # steam
