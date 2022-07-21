@@ -63,10 +63,10 @@ update:
 mods:
 	# metamod
 	@cd ${CSGO_DIR} && \
-		curl -sqL "https://mms.alliedmods.net/mmsdrop/1.10/mmsource-1.10.7-git971-linux.tar.gz" | tar zxf - 
+		curl -sqL "https://mms.alliedmods.net/mmsdrop/1.11/mmsource-1.11.0-git1148-linux.tar.gz" | tar zxf -
   # sourcemod
 	@cd ${CSGO_DIR} && \
-		curl -sqL "https://sm.alliedmods.net/smdrop/1.10/sourcemod-1.10.0-git6459-linux.tar.gz" | tar zxf -
+		curl -sqL "https://sm.alliedmods.net/smdrop/1.11/sourcemod-1.11.0-git6906-linux.tar.gz" | tar zxf -
 	# prophunt
 	@cd ${CSGO_DIR} && \
 		curl -o prophunt.zip -sqL "https://github.com/olavim/sm-PropHunt/archive/refs/heads/master.zip" && \
