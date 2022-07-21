@@ -67,10 +67,10 @@ mods:
   # sourcemod
 	@cd ${CSGO_DIR} && \
 		curl -sqL "https://sm.alliedmods.net/smdrop/1.10/sourcemod-1.10.0-git6459-linux.tar.gz" | tar zxf -
-
-.PHONY: build
-build:
-	$(ADDONS_DIR)/sourcemod/scripting/spcomp ${shell pwd}/plugins/surf/src/surf.sp -o $(ADDONS_DIR)/sourcemod/plugins/surf.smx
+	# prophunt
+	@cd ${CSGO_DIR} && \
+		curl -o prophunt.zip -sqL "https://github.com/olavim/sm-PropHunt/archive/refs/heads/master.zip" && \
+		unzip prophunt.zip
 
 .PHONY: clean
 clean:
