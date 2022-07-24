@@ -74,6 +74,12 @@ mods:
 		unzip prophunt.zip -d tmp && \
 		mv tmp/sm-PropHunt-master/*/* . && \
 		rm -rf tmp
+	# practice
+	@cd ${CSGO_DIR} && \
+		curl -o practicemode.zip -sqL "https://github.com/splewis/csgo-practice-mode/releases/download/1.3.4/practicemode_1.3.4.zip" && \
+		unzip practicemode.zip -d tmp && \
+		mv tmp/practicemode_1.3.4/*/* . && \
+		rm -rf tmp
 
 .PHONY: clean
 clean:
