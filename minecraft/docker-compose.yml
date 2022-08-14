@@ -3,7 +3,7 @@ version: '3.7'
 services:
   web:
     image: nginx:latest
-    container_name: web
+    container_name: mc.web
     volumes:
       - ./nginx.conf:/etc/nginx/conf.d/cryptic.conf
     restart: unless-stopped
@@ -11,19 +11,20 @@ services:
       - 80:80
       - 443:443
     links:
-      - crypticmc
+      - mc
 
-  mc-router:
+  router:
     image: itzg/mc-router
+    container_name: mc.router
     ports:
       - 25565:25565
     links:
-      - crypticmc
-    command: --mapping=mc.ak.gg=crypticmc:25565,mc.cryptic.house=crypticmc:25565
+      - mc
+    command: --mapping=mc.ak.gg=mc:25565
 
-  crypticmc:
+  mc:
     image: itzg/minecraft-server:java17
-    container_name: mc.cryptic
+    container_name: mc
     environment:
       EULA: "true"
       TYPE: "PAPER"
