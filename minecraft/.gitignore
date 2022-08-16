@@ -1,5 +1,6 @@
 data/
 tmp/
+surefire-reports/
 
 # Compiled class file
 *.class
