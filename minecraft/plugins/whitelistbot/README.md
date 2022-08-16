@@ -25,3 +25,6 @@ $ mvn install -f pom.xml
 ```
 
 ## Configuration within Slack
+
+## Local development
+ngrok http minecraft:3000

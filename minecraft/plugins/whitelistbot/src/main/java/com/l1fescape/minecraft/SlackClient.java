@@ -32,11 +32,11 @@ public class SlackClient {
       String username = req.getPayload().getText();
       logger.info(String.format("Request to whitelist %s", username));
       String command = String.format("whitelist add %s", username);
-      // todo: fetch plugin instance by name
-      Plugin[] plugins = Bukkit.getPluginManager().getPlugins();
-      Bukkit.getScheduler().runTask(plugins[0], () -> {
+      Plugin plugin = Bukkit.getPluginManager().getPlugin("WhitelistBot");
+      Bukkit.getScheduler().runTask(plugin, () -> {
         try {
-          try {`
+          try {
+            // todo: error handling
             Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), command);
             ctx.respond(res -> res
               .responseType("in_channel")
