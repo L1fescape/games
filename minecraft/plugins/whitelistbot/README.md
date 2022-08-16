@@ -26,5 +26,17 @@ $ mvn install -f pom.xml
 
 ## Configuration within Slack
 
+Create a new slack bot with the app manifest in `slack_app_manifest.yml`.
+
+Copy the `SLACK_BOT_TOKEN` and `SLACK_SIGNING_SECRET` and enter the values in `../docker-compose.yml`.
+
+Note: the domain hosting the minecraft server and bot will need to support https since Slack requires https for all command endpoints.
+
+wip
+
 ## Local development
-ngrok http minecraft:3000
+```
+$ ngrok http minecraft:3000
+```
+
+wip
