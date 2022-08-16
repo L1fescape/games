@@ -34,22 +34,14 @@ public class SlackClient {
       String command = String.format("whitelist add %s", username);
       Plugin plugin = Bukkit.getPluginManager().getPlugin("WhitelistBot");
       Bukkit.getScheduler().runTask(plugin, () -> {
+        Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), command);
         try {
-          try {
-            // todo: error handling
-            Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), command);
-            ctx.respond(res -> res
-              .responseType("in_channel")
-              .text(String.format("whitelisted %s", username))
-            );
-          } catch (CommandException e) {
-            ctx.respond(res -> res
-              .responseType("in_channel")
-              .text(String.format("error whitelisting %s", username))
-            );
-          }
+          ctx.respond(res -> res
+            .responseType("in_channel")
+            .text(String.format("whitelisted %s", username))
+          );
         } catch (IOException e) {
-          logger.warning(String.format("There was an error whitelisting %s: %s", username, e.toString()));
+          logger.warning(String.format("There was an error sending a message to slack: %s", e.toString()));
         }
       });
       return ctx.ack();
