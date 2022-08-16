@@ -1,0 +1,14 @@
+version: '3'
+services:
+  dev:
+    build:
+      context: .
+      dockerfile: .devcontainer/Dockerfile
+    ports:
+      - '3000'
+      - '25565:25565'
+    environment:
+      HOST: 0.0.0.0
+    volumes:
+      - ./:/workspace
+    command: sleep infinity

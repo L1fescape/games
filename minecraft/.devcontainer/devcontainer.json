@@ -1,0 +1,14 @@
+{
+  "name": "minecraft-plugin-dev",
+  "dockerComposeFile": [
+    "../docker-compose.yml",
+    "./docker-compose.extend.yml"
+  ],
+  "workspaceFolder": "/workspace",
+  "service": "dev",
+  "runArgs": ["-it"],
+  "extensions": [
+    "vscjava.vscode-java-pack",
+    "redhat.java"
+  ]
+}

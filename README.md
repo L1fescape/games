@@ -5,5 +5,3 @@
 ## Dependencies
 
 Many of these configs require `make`, `docker`, and `docker-compose`.
-
-

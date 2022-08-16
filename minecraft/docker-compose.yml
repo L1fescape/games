@@ -5,7 +5,7 @@ services:
     image: nginx:latest
     container_name: mc.web
     volumes:
-      - ./nginx.conf:/etc/nginx/conf.d/cryptic.conf
+      - ./nginx.conf:/etc/nginx/conf.d/minecraft.conf
     restart: unless-stopped
     ports:
       - 80:80
