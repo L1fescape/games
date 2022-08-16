@@ -5,13 +5,13 @@ services:
     image: nginx:latest
     container_name: mc.web
     volumes:
-      - ./nginx.conf:/etc/nginx/conf.d/minecraft.conf
+      - ./nginx.conf:/etc/nginx/nginx.conf
     restart: unless-stopped
     ports:
-      - 80:80
+      - 8080:80
       - 443:443
     links:
-      - mc
+      - minecraft
 
   router:
     image: itzg/mc-router
@@ -19,12 +19,12 @@ services:
     ports:
       - 25565:25565
     links:
-      - mc
-    command: --mapping=mc.ak.gg=mc:25565
+      - minecraft
+    command: --mapping=0.0.0.0=minecraft:25565
 
-  mc:
+  minecraft:
     image: itzg/minecraft-server:java17
-    container_name: mc
+    container_name: mc.server
     environment:
       EULA: "true"
       TYPE: "PAPER"
@@ -37,5 +37,7 @@ services:
       GID: 1000
     ports:
       - 25565
+      - 8123 
+      - 3000
     volumes:
       - ./data:/data

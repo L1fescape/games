@@ -1,0 +1,24 @@
+display_information:
+  name: mc.bot
+features:
+  bot_user:
+    display_name: mc.bot
+    always_online: false
+  slash_commands:
+    - command: /whitelist
+      url: https://dev.l1fescape.com/slack/events
+      description: Whitelist a minecraft user
+      usage_hint: minecraft_username
+      should_escape: false
+    - command: /help
+      url: https://dev.l1fescape.com/slack/events
+      description: ah shit
+      should_escape: false
+oauth_config:
+  scopes:
+    bot:
+      - commands
+settings:
+  org_deploy_enabled: false
+  socket_mode_enabled: false
+  token_rotation_enabled: false

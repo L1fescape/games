@@ -35,4 +35,4 @@ mods:
 
 .PHONY: rcon
 rcon:
-	docker exec -i mc rcon-cli
+	docker exec -i mc.server rcon-cli --password l1fesbutts

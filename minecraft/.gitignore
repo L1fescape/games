@@ -1,6 +1,5 @@
 data/
 tmp/
-libs/
 
 # Compiled class file
 *.class

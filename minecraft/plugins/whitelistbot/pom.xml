@@ -25,17 +25,17 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-  <groupId>com.slack.api</groupId>
-  <artifactId>bolt-jetty</artifactId> <!-- will resolve "bolt" and "bolt-servlet" artifacts as its dependencies -->
-  <version>1.8.1</version>
-</dependency>
-     <dependency>
-        <groupId>org.spigotmc</groupId>
-        <artifactId>spigot-api</artifactId>
-        <version>1.19.1</version>
-        <scope>system</scope>
-        <systemPath>${project.basedir}/libs/spigot-API-1.19.1.jar</systemPath>
-      </dependency>
+      <groupId>com.slack.api</groupId>
+      <artifactId>bolt-jetty</artifactId> <!-- will resolve "bolt" and "bolt-servlet" artifacts as its dependencies -->
+      <version>1.24.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.spigotmc</groupId>
+      <artifactId>spigot-api</artifactId>
+      <version>1.19.1</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/libs/spigot-API-1.19.1.jar</systemPath>
+     </dependency>
   </dependencies>
 
   <build>

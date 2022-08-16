@@ -15,5 +15,13 @@
 ## Build the Plugin
 
 ```
+$ make build
+```
+
+or if `make` is not installed:
+
+```
 $ mvn install -f pom.xml
 ```
+
+## Configuration within Slack
