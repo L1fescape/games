@@ -26,11 +26,11 @@ mods:
 		-L https://dynmap.us/releases/Dynmap-3.4-beta-5-spigot.jar
 	curl -o ${MODS_DIR}/worldedit.jar \
 		-L https://media.forgecdn.net/files/3028/434/worldedit-bukkit-7.2.12.jar
-	curl -o plugins/Multiverse-Core.jar \
+	curl -o ${MODS_DIR}/Multiverse-Core.jar \
 		-L https://mediafiles.forgecdn.net/files/3462/546/Multiverse-Core-4.3.1.jar
-	curl -o plugins/Multiverse-Portals.jar \
+	curl -o ${MODS_DIR}/Multiverse-Portals.jar \
 		-L https://mediafiles.forgecdn.net/files/3113/114/Multiverse-Portals-4.2.1.jar
-	curl -o plugins/Multiverse-Inventories.jar \
+	curl -o ${MODS_DIR}/Multiverse-Inventories.jar \
 		-L https://mediafiles.forgecdn.net/files/3687/469/Multiverse-Inventories-4.2.3.jar
 
 .PHONY: rcon
