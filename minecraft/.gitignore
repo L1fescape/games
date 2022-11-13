@@ -1,4 +1,7 @@
 data/
+deps/
+libs/
+target/
 tmp/
 surefire-reports/
 

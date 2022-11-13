@@ -28,7 +28,7 @@ services:
     environment:
       EULA: "true"
       TYPE: "PAPER"
-      VERSION: "1.19.1"
+      VERSION: "1.19.2"
       MOTD: ""
       RCON_PASSWORD: ""
       SLACK_BOT_TOKEN: ""
